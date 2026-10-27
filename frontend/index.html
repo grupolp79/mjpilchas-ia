@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MJPilchas | Asistente de ventas IA</title>
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="app">
+
+        <aside class="sidebar">
+            <div class="brand">
+                <img src="assets/logo.svg" alt="" width="40" height="40">
+                <div>
+                    <h2>MJPilchas</h2>
+                    <span>Ropa original de USA 🇺🇸</span>
+                </div>
+            </div>
+
+            <button id="new-chat" class="new-chat">
+                + Nuevo chat
+            </button>
+
+            <div class="info">
+                <p class="sidebar-label">Cómo comprar</p>
+                <ul>
+                    <li><strong>Stock:</strong> Drops publicados en Instagram</li>
+                    <li><strong>Encargo:</strong> Seña del 50% · ~14 días</li>
+                </ul>
+
+                <p class="sidebar-label">Envíos</p>
+                <ul>
+                    <li>Montevideo: puntos de encuentro</li>
+                    <li>Interior: agencia DAC</li>
+                </ul>
+
+                <p class="sidebar-label">Pagos</p>
+                <ul>
+                    <li>Transferencia o efectivo</li>
+                </ul>
+            </div>
+
+            <div class="sidebar-footer">
+                <a href="https://www.instagram.com/mjpilchaas/" target="_blank" rel="noopener">@mjpilchaas</a>
+                <span>Vendedores: 09:00 a 21:00</span>
+            </div>
+        </aside>
+
+        <main class="chat">
+
+            <header class="chat-header">
+                <div class="avatar">MJ</div>
+
+                <div>
+                    <h1>Asistente MJPilchas</h1>
+                    <span class="status"><span class="dot"></span> En línea · responde al instante</span>
+                </div>
+
+                <button id="new-chat-mobile" class="new-chat-mobile" type="button" aria-label="Nuevo chat">+ Nuevo</button>
+            </header>
+
+            <section
+                id="messages"
+                class="messages"
+                aria-live="polite"
+                aria-label="Conversación"
+            ></section>
+
+            <form id="chat-form" class="chat-form">
+                <label class="sr-only" for="message-input">
+                    Escribí tu mensaje
+                </label>
+
+                <input
+                    type="text"
+                    id="message-input"
+                    placeholder="Preguntá por precios, talles, envíos..."
+                    autocomplete="off"
+                    maxlength="1000"
+                    required
+                >
+
+                <button type="submit" id="send-button">
+                    Enviar
+                </button>
+            </form>
+
+            <p class="disclaimer">
+                Asistente con IA. Precio y stock final los confirma un vendedor.
+            </p>
+
+        </main>
+    </div>
+
+    <template id="welcome-template">
+        <div class="welcome">
+            <div class="welcome-icon">MJ</div>
+
+            <h2>¡Buenas! ¿Qué estás buscando?</h2>
+
+            <p>
+                Soy el asistente de MJPilchas. Te ayudo con precios,
+                talles, encargos, envíos y formas de pago.
+            </p>
+
+            <div class="suggestions">
+                <button type="button" class="suggestion">¿Qué tienen en stock?</button>
+                <button type="button" class="suggestion">¿Cómo funciona el encargo?</button>
+                <button type="button" class="suggestion">¿Hacen envíos al interior?</button>
+                <button type="button" class="suggestion">¿Es todo original?</button>
+            </div>
+        </div>
+    </template>
+
+    <script src="js/config.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
